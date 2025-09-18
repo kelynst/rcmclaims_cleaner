@@ -81,7 +81,7 @@ pip install -r requirements.txt
  ```
 **Clean a custom CSV**  
 ```bash 
-$ python claims_cleaner.py my_claims.csv
+python claims_cleaner.py my_claims.csv
 ```
 - A new file is created in the same folder named:  cleaned_sample_claims.csv
 
