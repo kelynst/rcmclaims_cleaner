@@ -53,6 +53,7 @@ pip install -r requirements.txt
 ```bash
 git clone https://github.com/kelynst/rcmclaims_cleaner.git
 cd rcmclaims_cleaner
+```
 2. 🌱 Create a virtual environment  
 ```bash
 python3 -m venv .venv
