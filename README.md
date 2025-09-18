@@ -77,7 +77,7 @@ pip install -r requirements.txt
 
 **Clean an example file**  
  ```bash 
- python claims_cleaner.py sample_claims.xlsx
+python claims_cleaner.py sample_claims.csv
  ```
 **Clean a custom CSV**  
 ```bash 
@@ -89,18 +89,29 @@ python claims_cleaner.py my_claims.csv
 
 ## 📝 Example Run  
 
-**Input (sample_claims.xlsx)**  
+**Input (sample_claims.csv)**  
 | PatientID | DOB       | DOS       | Amount | Notes       |  
 |-----------|-----------|-----------|--------|-------------|  
 | 101       | 01/02/1980| 2025-01-05| 200    | follow-up   |  
 | 101       | 01/02/1980| 2025-01-05| 200    | follow-up   |  
 | 102       |           | 2025-02-15| 500    |             |  
 
-**Output (cleaned_sample_claims.csv)**  
-| PatientID | DOB        | DOS        | Amount | Notes     |  
-|-----------|------------|------------|--------|-----------|  
-| 101       | 1980-01-02 | 2025-01-05 | 200    | follow-up |  
-| 102       |            | 2025-02-15 | 500    |           |  
+**Run command**  
+```bash
+python clean_claims.py sample_claims.csv
+```
+
+
+```
+✅ Clean complete  
+• Input:  sample_claims.csv  
+• Output: cleaned_sample_claims.csv  
+• Rows: 3 → 3 (after empty-row drop) → 2 (after dedup)  
+• Cols: 5 → 5  
+• Date columns normalized: DOB, DOS  
+```
+
+
 
 ---
 
